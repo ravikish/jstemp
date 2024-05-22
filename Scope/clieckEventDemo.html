@@ -7,12 +7,24 @@
     <button id="myButton"> Click me</button>
     <p id="output"> </p>
 
+    <input type="text" id="myinput">
+
     <script>
         const button = document.getElementById("myButton");
         const output = document.getElementById("output");
 
         button.onclick = function() {
             output.textContent = "Button Clicked";
+        };
+
+        button.onmouseover = function() {
+            output.textContent = "Hover on me";
+        }
+
+        // key down event
+        const input = document.getElementById("myinput");
+        input.onkeydown = function(event) {
+            output.textContent = `key pressed: ${event.key}`;
         };
     </script>
 </body>
