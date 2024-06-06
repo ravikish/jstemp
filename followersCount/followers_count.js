@@ -3,6 +3,7 @@ function increaseCount() {
     count++; // Increment the count by 1
     displayCount();
     checkCountValue();
+    checkTrycatch();
   }
 
 function displayCount() {
@@ -21,3 +22,13 @@ function resetCount() {
     count = 0; // Reset the count to 0
     displayCount(); // Update the display
   }
+
+function checkTrycatch() {
+  try{
+    let jsonstring = '{"name": "John", "age":30,}';  // JSON string
+    let user = JSON.parse(jsonstring);
+    return user;
+  } catch(error){
+    console.log('JSON parser error:', error.message);
+  }
+}
