@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
+
 <body>
     <!-- Navigation Bar -->
     <nav>
@@ -25,17 +27,20 @@
     <!--Local time display-->
     <div id="local-time" class="local-time"></div>
 
-    <!-- Main Content -->
-    <div class="main-content">
-        <div class="content-overlay">
-            <h1>Explore the World with TravelBloom</h1>
-            <p>Discover new destinations and immerse yourself in different cultures. Your adventure starts here.</p>
-            <button onclick="bookNow()">Book Now</button>
-        </div>
-    </div>
 
     <!-- Search Results -->
-    <div id="search-results" class="search-results"></div>
+    <section class="results-section">
+        <div class="results-container" id="search-results"></div>
+    </section>
+
+    <!-- Explore Section -->
+    <section class="explore-section">
+        <h1>Explore the World with TravelBloom</h1>
+        <p>Discover new destinations and immerse yourself in different cultures. Your adventure starts here.</p>
+        <a href="#" class="book-now-btn">Book Now</a>
+    </section>
+
+
 
     <!-- Social Media Links -->
     <div class="social-media">
@@ -47,4 +52,5 @@
 
     <script src="./travel_recommendation.js"></script>
 </body>
+
 </html>
