@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelBloom</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo"><img src="Images/logo.PNG" alt="TravelBloom Logo"> TravelBloom</div>
+        <ul class="nav-links">
+            <li><a href="travel_recommendation.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Search destinations...">
+            <button onclick="search()">Search</button>
+            <button onclick="clearSearch()">Clear</button>
+        </div>
+    </nav>
+    <!--Local time display-->
+    <div id="local-time" class="local-time"></div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="content-overlay">
+            <h1>Explore the World with TravelBloom</h1>
+            <p>Discover new destinations and immerse yourself in different cultures. Your adventure starts here.</p>
+            <button onclick="bookNow()">Book Now</button>
+        </div>
+    </div>
+
+    <!-- Search Results -->
+    <div id="search-results" class="search-results"></div>
+
+    <!-- Social Media Links -->
+    <div class="social-media">
+        <a href="#">Facebook</a>
+        <a href="#">Twitter</a>
+        <a href="#">Instagram</a>
+        <a href="#">Youtube</a>
+    </div>
+
+    <script src="./travel_recommendation.js"></script>
+</body>
+</html>
