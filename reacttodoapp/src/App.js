@@ -5,6 +5,9 @@ import Greeting from "./components/Greetings";
 import InputComponent from "./components/InputComponent";
 import SiblingOne from "./components/SiblingOne";
 import SiblingTwo from "./components/SiblingTwo";
+import ComponentA from "./components/ComponentA";
+import ComponentB from "./components/ComponentB";
+import { GlobalProvider } from "./context/GlobalContext";
 
 
 
@@ -22,8 +25,8 @@ function App() {
   // Using context API for global state management.
 
   return (
-    <div className="App">
-      <HelloWorld />
+    
+      /* <HelloWorld />
       <Counter />
 
       <Greeting name={name} />
@@ -34,7 +37,15 @@ function App() {
       <p><b>Sibling to Sibling data sharing</b></p>
       <SiblingOne sharedValue={sharedValue} setSharedValue={setSharedValue}/>
       <SiblingTwo sharedValue={sharedValue}/>
-    </div>
+
+      <p><b>Global context</b></p> */
+      <GlobalProvider>
+        <div className="App">
+          <ComponentA/>
+          <ComponentB/>
+        </div>
+      </GlobalProvider>
+    
   );
 }
 
