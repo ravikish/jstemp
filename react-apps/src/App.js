@@ -3,26 +3,32 @@ import React, { useState } from "react";
 
 
 function App() {
-    const [name, setName] = useState("");
+    const [score, setScore] = useState("10");
+    const [comment,setComment] = useState("");
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        setName('');
+        if (Number(score) < 5 && comment.length <= 10) {
+            alert("Please provide a comment explaining the why the experience was poor!");
+            return;
+        }
         console.log("Form submitted successfully!");
     };
     return (
         <div className="App">
             <form onSubmit={handleSubmit}>
                 <fieldset>
-                    <legend>Personalia</legend>
-                    <div className="Field">
-                        <label htmlFor="name">Name:</label>
-                        <input id="name" type="text" placeholder="Name" name="name" value={name}
-                            onChange={(e) => setName(e.target.value)} />
-                    </div>
+                    <legend>Feedback Form</legend>
                     <div>
-                        <button disabled={!name} type="submit">Submit</button>
+                        <label> Rating: {score}</label>
+                        <input type="range" min="0" max="10" value={score} onChange={(e) => setScore(e.target.value)}></input>
                     </div>
+
+                    <div>
+                        <label htmlFor="comment">Comment:</label>
+                        <textarea id="comment" value={comment} onChange={(e)=>setComment(e.target.value)}>Comment</textarea>
+                    </div>
+                    <button disabled={!comment } type="submit">Submit</button>
                 </fieldset>
             </form>
         </div>
